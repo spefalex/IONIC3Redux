@@ -31,7 +31,7 @@ import { HttpModule } from "@angular/http";
 import { File } from '@ionic-native/file';
 import { Transfer } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
-
+import { FileOpener } from '@ionic-native/file-opener';
 
 @NgModule({
   declarations: [MyApp, HomePage, AcceuilPage,MessagePage,EquipePage,ResultatsPage,PaiementPage,MoncomptePage,ObjectifPage,OffresPage,InscriptionPage,MenuPage,TabsPage],
@@ -57,6 +57,7 @@ import { FilePath } from '@ionic-native/file-path';
     Transfer,
     FilePath,
     FileTransfer,
+    FileOpener,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

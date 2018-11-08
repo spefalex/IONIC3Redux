@@ -6,6 +6,7 @@ import { UserAction,UserInformationAction } from "../../Interface/User/user.redu
 import { UserService } from "../../Interface/User/user.service";
 import { StorageService } from "../../Interface/Services/storage-service";
 import { AcceuilPage } from "../acceuil/acceuil";
+import { MenuPage } from "../menu/menu";
 import { Modal, ModalController, ModalOptions } from "ionic-angular";
 import { InscriptionPage } from "../inscription/inscription";
 import { Subscription } from "rxjs";
@@ -48,7 +49,9 @@ export class HomePage {
   login() {
     this.store.dispatch(new UserAction(this.username, this.password));
   }
-
+  testPdf() {
+    this.navCtrl.push(MenuPage);
+  }
   inscription() {
     const myModalOptions: ModalOptions = {
       enableBackdropDismiss: false
